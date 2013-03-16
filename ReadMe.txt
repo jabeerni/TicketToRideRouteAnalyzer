@@ -1,0 +1,3 @@
+My kids wanted to know the fewest number of trains required to reach all the cities in the popular board game, Ticket To Ride. I th9ough this wouldn't be too hard of a problem to solve, until I started coding it. Then I realized that I'd want to add more and more features to it over time, and it seemed like a great problem to set up as my first open source project.
+
+I apologize in advance for the mess. Suggestions for improvement are always appreciated.
