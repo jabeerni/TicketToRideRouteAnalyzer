@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketToRideAnalyzer", "TicketToRideAnalyzer\TicketToRideAnalyzer.csproj", "{F306A422-B023-4323-8E45-89D045AFE9AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketToRideAnalyzer.Tests", "TicketToRideAnalyzer.Tests\TicketToRideAnalyzer.Tests.csproj", "{B18FCA82-34A2-4DD8-A019-71FC421D46D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouteAnalyzer", "RouteAnalyzer\RouteAnalyzer.csproj", "{D47937A1-8B07-4D49-B913-613DB0A32954}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRouteAnalyzer", "TestRouteAnalyzer\TestRouteAnalyzer.csproj", "{C63A3A4E-35FF-4545-A55A-7AF31015D835}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F306A422-B023-4323-8E45-89D045AFE9AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F306A422-B023-4323-8E45-89D045AFE9AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F306A422-B023-4323-8E45-89D045AFE9AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F306A422-B023-4323-8E45-89D045AFE9AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B18FCA82-34A2-4DD8-A019-71FC421D46D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B18FCA82-34A2-4DD8-A019-71FC421D46D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B18FCA82-34A2-4DD8-A019-71FC421D46D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B18FCA82-34A2-4DD8-A019-71FC421D46D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D47937A1-8B07-4D49-B913-613DB0A32954}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D47937A1-8B07-4D49-B913-613DB0A32954}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D47937A1-8B07-4D49-B913-613DB0A32954}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D47937A1-8B07-4D49-B913-613DB0A32954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C63A3A4E-35FF-4545-A55A-7AF31015D835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C63A3A4E-35FF-4545-A55A-7AF31015D835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C63A3A4E-35FF-4545-A55A-7AF31015D835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C63A3A4E-35FF-4545-A55A-7AF31015D835}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
