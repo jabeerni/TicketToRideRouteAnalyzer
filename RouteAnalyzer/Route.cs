@@ -8,8 +8,8 @@ namespace RouteAnalyzer
 {
     public class Route
     {
-        public string StartCity { get; set; }
-        public string EndCity { get; set; }
+        public City StartCity { get; set; }
+        public City EndCity { get; set; }
         public int NumberOfPoints { get; set; }
     }
 }

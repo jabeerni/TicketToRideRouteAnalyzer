@@ -31,9 +31,10 @@ namespace TestRouteAnalyzer
         {
             var routeManager = RouteManager.Instance;
 
-            var startCity = "Calgary";
-            var endCity = "Los Angeles";
-            var citiesReached = new List<string>(){ startCity };
+            var startCity = City.Calgary;
+            var endCity = City.LosAngeles;
+
+            var citiesReached = new List<City>(){ startCity };
 
             var route = routeManager.GetRoute(startCity, endCity, citiesReached);
 
@@ -57,13 +58,13 @@ namespace TestRouteAnalyzer
         {
             var routeManager = RouteManager.Instance;
 
-            var startCity = "Calgary";
-            var endCity = "Los Angeles";
+            var startCity = City.Calgary;
+            var endCity = City.LosAngeles;
             var expected = 13;
 
             var actual = routeManager.GetCostForRoute(startCity, endCity);
 
-            Console.WriteLine("Cost of Route from {0} to {1} is {2}", startCity, endCity, expected);
+            Console.WriteLine("Cost of Route from {0} to {1} is {2}", startCity, endCity, actual);
 
             Assert.AreEqual(expected, actual);
         }

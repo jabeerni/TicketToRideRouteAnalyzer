@@ -38,10 +38,10 @@ namespace RouteAnalyzer
 
         private void AddRoutes(List<Route> routes)
         {
-            routes.Add(new Route { StartCity = "Los Angeles", EndCity = "Seattle", NumberOfPoints = 9 });
-            routes.Add(new Route { StartCity = "Calgary", EndCity = "Phoenix", NumberOfPoints = 8 });
-            routes.Add(new Route { StartCity = "Helena", EndCity = "Los Angeles", NumberOfPoints = 7 });
-            routes.Add(new Route { StartCity = "Vancouver", EndCity = "Portland", NumberOfPoints = 2 });
+            routes.Add(new Route { StartCity = City.LosAngeles, EndCity = City.Seattle, NumberOfPoints = 9 });
+            routes.Add(new Route { StartCity = City.Calgary, EndCity = City.Phoenix, NumberOfPoints = 8 });
+            routes.Add(new Route { StartCity = City.Helena, EndCity = City.LosAngeles, NumberOfPoints = 7 });
+            routes.Add(new Route { StartCity = City.Vancouver, EndCity = City.Portland, NumberOfPoints = 2 });
 
             // todo: Add the rest of the Routes
         }
@@ -51,16 +51,22 @@ namespace RouteAnalyzer
             return route.Sum(r => r.NumberOfTrains);
         }
 
-        public int GetCostForRoute(string startCity, string endCity)
+        public int GetCostForRoute(City startCity, City endCity)
         {
-            var citiesReached = new List<string>() { startCity };
+            var citiesReached = new List<City>() { startCity };
 
             var route = GetRoute(startCity, endCity, citiesReached);
             
             return GetCostForRoute(route);
         }
 
-        public Stack<Segment> GetRoute(string startCity, string endCity, List<string> citiesReached)
+        public Stack<Segment> GetRoute(City startCity, City endCity)
+        {
+            var citiesReached = new List<City>(){ startCity };
+            return GetRoute(startCity, endCity, citiesReached);
+        }
+
+        public Stack<Segment> GetRoute(City startCity, City endCity, List<City> citiesReached)
         {
             var route = new Stack<Segment>();
 

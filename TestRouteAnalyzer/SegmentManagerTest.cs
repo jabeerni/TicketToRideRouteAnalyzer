@@ -31,7 +31,7 @@ namespace TestRouteAnalyzer
             var segmentManager = SegmentManager.Instance;
 
             Assert.IsNotNull(segmentManager.Segments);
-            Assert.IsTrue(segmentManager.Segments.Any(s => s.StartCity == "Vancouver" && s.EndCity == "Seattle" && s.NumberOfTrains == 1));
+            Assert.IsTrue(segmentManager.Segments.Any(s => s.StartCity == City.Vancouver && s.EndCity == City.Seattle && s.NumberOfTrains == 1));
         }
 
     }

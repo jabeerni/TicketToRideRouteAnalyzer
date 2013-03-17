@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="City.cs" />
     <Compile Include="RouteManager.cs" />
     <Compile Include="Route.cs" />
     <Compile Include="SegmentManager.cs" />

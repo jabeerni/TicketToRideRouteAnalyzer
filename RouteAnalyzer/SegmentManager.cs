@@ -26,90 +26,90 @@ namespace RouteAnalyzer
 
         private void AddOriginalSegments(List<Segment> segments)
         {
-            segments.Add(new Segment { StartCity = "Los Angeles", EndCity = "San Francisco", NumberOfTrains = 3 });
-            segments.Add(new Segment { StartCity = "San Francisco", EndCity = "Portland", NumberOfTrains = 5 });
-            segments.Add(new Segment { StartCity = "Los Angeles", EndCity = "El Paso", NumberOfTrains = 6 });
-            segments.Add(new Segment { StartCity = "Los Angeles", EndCity = "Las Vegas", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Los Angeles", EndCity = "Phoenix", NumberOfTrains = 3 });
-            segments.Add(new Segment { StartCity = "Portland", EndCity = "Seattle", NumberOfTrains = 1 });
-            segments.Add(new Segment { StartCity = "Seattle", EndCity = "Vancouver", NumberOfTrains = 1 });
-            segments.Add(new Segment { StartCity = "Seattle", EndCity = "Calgary", NumberOfTrains = 4 });
-            segments.Add(new Segment { StartCity = "Vancouver", EndCity = "Calgary", NumberOfTrains = 3 });
+            segments.Add(new Segment { StartCity = City.LosAngeles, EndCity = City.SanFrancisco, NumberOfTrains = 3 });
+            segments.Add(new Segment { StartCity = City.SanFrancisco, EndCity = City.Portland, NumberOfTrains = 5 });
+            segments.Add(new Segment { StartCity = City.LosAngeles, EndCity = City.ElPaso, NumberOfTrains = 6 });
+            segments.Add(new Segment { StartCity = City.LosAngeles, EndCity = City.LasVegas, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.LosAngeles, EndCity = City.Phoenix, NumberOfTrains = 3 });
+            segments.Add(new Segment { StartCity = City.Portland, EndCity = City.Seattle, NumberOfTrains = 1 });
+            segments.Add(new Segment { StartCity = City.Seattle, EndCity = City.Vancouver, NumberOfTrains = 1 });
+            segments.Add(new Segment { StartCity = City.Seattle, EndCity = City.Calgary, NumberOfTrains = 4 });
+            segments.Add(new Segment { StartCity = City.Vancouver, EndCity = City.Calgary, NumberOfTrains = 3 });
 
-            segments.Add(new Segment { StartCity = "Las Vegas", EndCity = "Salt Lake City", NumberOfTrains = 3 });
-            segments.Add(new Segment { StartCity = "Portland", EndCity = "Salt Lake City", NumberOfTrains = 6 });
-            segments.Add(new Segment { StartCity = "Seattle", EndCity = "Helena", NumberOfTrains = 6 });
-            segments.Add(new Segment { StartCity = "Calgary", EndCity = "Helena", NumberOfTrains = 4 });
-            segments.Add(new Segment { StartCity = "Calgary", EndCity = "Winnipeg", NumberOfTrains = 6 });
+            segments.Add(new Segment { StartCity = City.LasVegas, EndCity = City.SaltLakeCity, NumberOfTrains = 3 });
+            segments.Add(new Segment { StartCity = City.Portland, EndCity = City.SaltLakeCity, NumberOfTrains = 6 });
+            segments.Add(new Segment { StartCity = City.Seattle, EndCity = City.Helena, NumberOfTrains = 6 });
+            segments.Add(new Segment { StartCity = City.Calgary, EndCity = City.Helena, NumberOfTrains = 4 });
+            segments.Add(new Segment { StartCity = City.Calgary, EndCity = City.Winnipeg, NumberOfTrains = 6 });
 
-            segments.Add(new Segment { StartCity = "Helena", EndCity = "Winnipeg", NumberOfTrains = 4 });
-            segments.Add(new Segment { StartCity = "Helena", EndCity = "Salt Lake City", NumberOfTrains = 3 });
-            segments.Add(new Segment { StartCity = "Helena", EndCity = "Omaha", NumberOfTrains = 5 });
-            segments.Add(new Segment { StartCity = "Helena", EndCity = "Duluth", NumberOfTrains = 6 });
-            segments.Add(new Segment { StartCity = "Winnipeg", EndCity = "Duluth", NumberOfTrains = 4 });
-            segments.Add(new Segment { StartCity = "Winnipeg", EndCity = "Sault St. Marie", NumberOfTrains = 6 });
-            segments.Add(new Segment { StartCity = "Phoenix", EndCity = "El Paso", NumberOfTrains = 3 });
-            segments.Add(new Segment { StartCity = "Denver", EndCity = "Phoenix", NumberOfTrains = 5 });
-            segments.Add(new Segment { StartCity = "Denver", EndCity = "Salt Lake City", NumberOfTrains = 3 });
-            segments.Add(new Segment { StartCity = "Denver", EndCity = "Helena", NumberOfTrains = 4 });
+            segments.Add(new Segment { StartCity = City.Helena, EndCity = City.Winnipeg, NumberOfTrains = 4 });
+            segments.Add(new Segment { StartCity = City.Helena, EndCity = City.SaltLakeCity, NumberOfTrains = 3 });
+            segments.Add(new Segment { StartCity = City.Helena, EndCity = City.Omaha, NumberOfTrains = 5 });
+            segments.Add(new Segment { StartCity = City.Helena, EndCity = City.Duluth, NumberOfTrains = 6 });
+            segments.Add(new Segment { StartCity = City.Winnipeg, EndCity = City.Duluth, NumberOfTrains = 4 });
+            segments.Add(new Segment { StartCity = City.Winnipeg, EndCity = City.SaultStMarie, NumberOfTrains = 6 });
+            segments.Add(new Segment { StartCity = City.Phoenix, EndCity = City.ElPaso, NumberOfTrains = 3 });
+            segments.Add(new Segment { StartCity = City.Denver, EndCity = City.Phoenix, NumberOfTrains = 5 });
+            segments.Add(new Segment { StartCity = City.Denver, EndCity = City.SaltLakeCity, NumberOfTrains = 3 });
+            segments.Add(new Segment { StartCity = City.Denver, EndCity = City.Helena, NumberOfTrains = 4 });
 
-            segments.Add(new Segment { StartCity = "Denver", EndCity = "Omaha", NumberOfTrains = 4 });
-            segments.Add(new Segment { StartCity = "Denver", EndCity = "Kansas City", NumberOfTrains = 4 });
-            segments.Add(new Segment { StartCity = "Denver", EndCity = "Oklahoma City", NumberOfTrains = 4 });
-            segments.Add(new Segment { StartCity = "Denver", EndCity = "Santa Fe", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Santa Fe", EndCity = "El Paso", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Santa Fe", EndCity = "Oklahoma City", NumberOfTrains = 3 });
-            segments.Add(new Segment { StartCity = "El Paso", EndCity = "Oklahoma City", NumberOfTrains = 5 });
-            segments.Add(new Segment { StartCity = "El Paso", EndCity = "Dallas", NumberOfTrains = 4 });
-            segments.Add(new Segment { StartCity = "El Paso", EndCity = "Houston", NumberOfTrains = 6 });
+            segments.Add(new Segment { StartCity = City.Denver, EndCity = City.Omaha, NumberOfTrains = 4 });
+            segments.Add(new Segment { StartCity = City.Denver, EndCity = City.KansasCity, NumberOfTrains = 4 });
+            segments.Add(new Segment { StartCity = City.Denver, EndCity = City.OklahomaCity, NumberOfTrains = 4 });
+            segments.Add(new Segment { StartCity = City.Denver, EndCity = City.SantaFe, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.SantaFe, EndCity = City.ElPaso, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.SantaFe, EndCity = City.OklahomaCity, NumberOfTrains = 3 });
+            segments.Add(new Segment { StartCity = City.ElPaso, EndCity = City.OklahomaCity, NumberOfTrains = 5 });
+            segments.Add(new Segment { StartCity = City.ElPaso, EndCity = City.Dallas, NumberOfTrains = 4 });
+            segments.Add(new Segment { StartCity = City.ElPaso, EndCity = City.Houston, NumberOfTrains = 6 });
 
-            segments.Add(new Segment { StartCity = "Duluth", EndCity = "Sault St. Marie", NumberOfTrains = 3 });
-            segments.Add(new Segment { StartCity = "Duluth", EndCity = "Omaha", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Duluth", EndCity = "Chicago", NumberOfTrains = 3 });
-            segments.Add(new Segment { StartCity = "Duluth", EndCity = "Toronto", NumberOfTrains = 6 });
-            segments.Add(new Segment { StartCity = "Omaha", EndCity = "Kansas City", NumberOfTrains = 1 });
-            segments.Add(new Segment { StartCity = "Omaha", EndCity = "Chicago", NumberOfTrains = 4 });
-            segments.Add(new Segment { StartCity = "Kansas City", EndCity = "Oklahoma City", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Kansas City", EndCity = "Saint Louis", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Oklahoma City", EndCity = "Dallas", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Oklahoma City", EndCity = "Little Rock", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Dallas", EndCity = "Houston", NumberOfTrains = 1 });
-            segments.Add(new Segment { StartCity = "Dallas", EndCity = "Little Rock", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Houston", EndCity = "New Orleans", NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.Duluth, EndCity = City.SaultStMarie, NumberOfTrains = 3 });
+            segments.Add(new Segment { StartCity = City.Duluth, EndCity = City.Omaha, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.Duluth, EndCity = City.Chicago, NumberOfTrains = 3 });
+            segments.Add(new Segment { StartCity = City.Duluth, EndCity = City.Toronto, NumberOfTrains = 6 });
+            segments.Add(new Segment { StartCity = City.Omaha, EndCity = City.KansasCity, NumberOfTrains = 1 });
+            segments.Add(new Segment { StartCity = City.Omaha, EndCity = City.Chicago, NumberOfTrains = 4 });
+            segments.Add(new Segment { StartCity = City.KansasCity, EndCity = City.OklahomaCity, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.KansasCity, EndCity = City.SaintLouis, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.OklahomaCity, EndCity = City.Dallas, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.OklahomaCity, EndCity = City.LittleRock, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.Dallas, EndCity = City.Houston, NumberOfTrains = 1 });
+            segments.Add(new Segment { StartCity = City.Dallas, EndCity = City.LittleRock, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.Houston, EndCity = City.NewOrleans, NumberOfTrains = 2 });
 
-            segments.Add(new Segment { StartCity = "Little Rock", EndCity = "New Orleans", NumberOfTrains = 3 });
-            segments.Add(new Segment { StartCity = "Little Rock", EndCity = "Nashville", NumberOfTrains = 3 });
-            segments.Add(new Segment { StartCity = "Little Rock", EndCity = "Saint Louis", NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.LittleRock, EndCity = City.NewOrleans, NumberOfTrains = 3 });
+            segments.Add(new Segment { StartCity = City.LittleRock, EndCity = City.Nashville, NumberOfTrains = 3 });
+            segments.Add(new Segment { StartCity = City.LittleRock, EndCity = City.SaintLouis, NumberOfTrains = 2 });
 
-            segments.Add(new Segment { StartCity = "Sault St. Marie", EndCity = "Montreal", NumberOfTrains = 5 });
-            segments.Add(new Segment { StartCity = "Sault St. Marie", EndCity = "Toronto", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Toronto", EndCity = "Montreal", NumberOfTrains = 3 });
-            segments.Add(new Segment { StartCity = "Toronto", EndCity = "Pittsburgh", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Chicago", EndCity = "Toronto", NumberOfTrains = 4 });
-            segments.Add(new Segment { StartCity = "Chicago", EndCity = "Saint Louis", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Chicago", EndCity = "Pittsburgh", NumberOfTrains = 3 });
+            segments.Add(new Segment { StartCity = City.SaultStMarie, EndCity = City.Montreal, NumberOfTrains = 5 });
+            segments.Add(new Segment { StartCity = City.SaultStMarie, EndCity = City.Toronto, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.Toronto, EndCity = City.Montreal, NumberOfTrains = 3 });
+            segments.Add(new Segment { StartCity = City.Toronto, EndCity = City.Pittsburgh, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.Chicago, EndCity = City.Toronto, NumberOfTrains = 4 });
+            segments.Add(new Segment { StartCity = City.Chicago, EndCity = City.SaintLouis, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.Chicago, EndCity = City.Pittsburgh, NumberOfTrains = 3 });
 
-            segments.Add(new Segment { StartCity = "Montreal", EndCity = "New York", NumberOfTrains = 3 });
-            segments.Add(new Segment { StartCity = "Montreal", EndCity = "Boston", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Boston", EndCity = "New York", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "New York", EndCity = "Pittsburgh", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Washington", EndCity = "Pittsburgh", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Nashville", EndCity = "Pittsburgh", NumberOfTrains = 4 });
-            segments.Add(new Segment { StartCity = "Raleigh", EndCity = "Pittsburgh", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Saint Louis", EndCity = "Pittsburgh", NumberOfTrains = 5 });
+            segments.Add(new Segment { StartCity = City.Montreal, EndCity = City.NewYork, NumberOfTrains = 3 });
+            segments.Add(new Segment { StartCity = City.Montreal, EndCity = City.Boston, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.Boston, EndCity = City.NewYork, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.NewYork, EndCity = City.Pittsburgh, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.Washington, EndCity = City.Pittsburgh, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.Nashville, EndCity = City.Pittsburgh, NumberOfTrains = 4 });
+            segments.Add(new Segment { StartCity = City.Raleigh, EndCity = City.Pittsburgh, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.SaintLouis, EndCity = City.Pittsburgh, NumberOfTrains = 5 });
 
-            segments.Add(new Segment { StartCity = "New York", EndCity = "Washington", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Raleigh", EndCity = "Washington", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Raleigh", EndCity = "Nashville", NumberOfTrains = 3 });
-            segments.Add(new Segment { StartCity = "Raleigh", EndCity = "Atlanta", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Raleigh", EndCity = "Charleston", NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.NewYork, EndCity = City.Washington, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.Raleigh, EndCity = City.Washington, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.Raleigh, EndCity = City.Nashville, NumberOfTrains = 3 });
+            segments.Add(new Segment { StartCity = City.Raleigh, EndCity = City.Atlanta, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.Raleigh, EndCity = City.Charleston, NumberOfTrains = 2 });
 
-            segments.Add(new Segment { StartCity = "Atlanta", EndCity = "Charleston", NumberOfTrains = 2 });
-            segments.Add(new Segment { StartCity = "Atlanta", EndCity = "Nashville", NumberOfTrains = 1 });
-            segments.Add(new Segment { StartCity = "Atlanta", EndCity = "New Orleans", NumberOfTrains = 4 });
-            segments.Add(new Segment { StartCity = "Atlanta", EndCity = "Miami", NumberOfTrains = 5 });
-            segments.Add(new Segment { StartCity = "Charleston", EndCity = "Miami", NumberOfTrains = 4 });
-            segments.Add(new Segment { StartCity = "New Orleans", EndCity = "Miami", NumberOfTrains = 6 });
+            segments.Add(new Segment { StartCity = City.Atlanta, EndCity = City.Charleston, NumberOfTrains = 2 });
+            segments.Add(new Segment { StartCity = City.Atlanta, EndCity = City.Nashville, NumberOfTrains = 1 });
+            segments.Add(new Segment { StartCity = City.Atlanta, EndCity = City.NewOrleans, NumberOfTrains = 4 });
+            segments.Add(new Segment { StartCity = City.Atlanta, EndCity = City.Miami, NumberOfTrains = 5 });
+            segments.Add(new Segment { StartCity = City.Charleston, EndCity = City.Miami, NumberOfTrains = 4 });
+            segments.Add(new Segment { StartCity = City.NewOrleans, EndCity = City.Miami, NumberOfTrains = 6 });
         }
 
         private static void AddReverseSegments(List<Segment> segments)
