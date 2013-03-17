@@ -110,10 +110,6 @@ namespace RouteAnalyzer
             segments.Add(new Segment { StartCity = "Atlanta", EndCity = "Miami", NumberOfTrains = 5 });
             segments.Add(new Segment { StartCity = "Charleston", EndCity = "Miami", NumberOfTrains = 4 });
             segments.Add(new Segment { StartCity = "New Orleans", EndCity = "Miami", NumberOfTrains = 6 });
-
-
-
-            // todo: Add the rest of the Segments
         }
 
         private static void AddReverseSegments(List<Segment> segments)
