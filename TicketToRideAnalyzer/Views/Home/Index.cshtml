@@ -35,5 +35,29 @@ Route Found:
 
 @Html.Label(string.Format("Total Cost = {0}", Model.routeCost))
 
-<!-- @Maps.GetBingHtml(key:"AjK_c-a0hYILuxmGiLjmJkossrnxKovOyzS6Q1tRu6R-T-ikma9tvJmkL5Vn5OJD", location:"2033 6th Ave, Seattle, WA", width:"400px", height:"400px") -->
-@Maps.GetGoogleHtml(location:"2033 6th Ave, Seattle, WA", width:"400px", height:"400px")
+@Maps.GetBingHtml(key:"AjK_c-a0hYILuxmGiLjmJkossrnxKovOyzS6Q1tRu6R-T-ikma9tvJmkL5Vn5OJD", location:"2033 6th Ave, Seattle, WA", width:"600px", height:"800px")
+@*@Maps.GetGoogleHtml(location:"2033 6th Ave, Seattle, WA", width:"600px", height:"800px")*@
+
+@*<div id="myMap" style="float: none; position: relative; width: 600px; height: 400px;"></div>
+@section scripts{
+
+
+    <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var map = null;
+            var location = null;
+
+            function loadMap() {
+                //initialise the map
+                map = new Microsoft.Maps.Map(document.getElementById("myMap"),
+                { credentials: "AjK_c-a0hYILuxmGiLjmJkossrnxKovOyzS6Q1tRu6R-T-ikma9tvJmkL5Vn5OJD" },
+                { location:"Seattle, WA" });
+            }
+            loadMap();
+        });
+
+    </script>
+
+}*@
