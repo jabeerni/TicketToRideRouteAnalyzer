@@ -33,10 +33,10 @@ namespace TicketToRideAnalyzer.Controllers
 
             if (!string.IsNullOrWhiteSpace(model.StartCity) && !string.IsNullOrWhiteSpace(model.EndCity))
             {
-                var routeManager = RouteManager.Instance;
+                var pathManager = new PathManager();
                 var startCity = (City)Enum.Parse(typeof(City), model.StartCity);
                 var endCity = (City)Enum.Parse(typeof(City), model.EndCity);
-                var route = routeManager.GetRoute(startCity, endCity);
+                var route = pathManager.GetRoute(startCity, endCity);
 
                 if (route.Any())
                 {
@@ -46,7 +46,7 @@ namespace TicketToRideAnalyzer.Controllers
                     }
 
                     model.RouteCities.Add(route.LastOrDefault().EndCity.ToString());
-                    model.routeCost = routeManager.GetCostForRoute(route);
+                    model.routeCost = pathManager.BestCost;
                 }
             }
 

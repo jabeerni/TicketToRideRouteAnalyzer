@@ -7,36 +7,33 @@ using System.Collections.Generic;
 namespace TestRouteAnalyzer
 {
     [TestClass]
-    public class RouteManagerTest
+    public class PathManagerTest
     {
         [TestMethod]
-        public void VerifyRouteManagerIsNotNull()
+        public void VerifyPathManagerIsNotNull()
         {
-            var routeManager = RouteManager.Instance;
+            var pathManager = new PathManager();
 
-            Assert.IsNotNull(routeManager);
+            Assert.IsNotNull(pathManager);
         }
 
         [TestMethod]
         public void VerifyRouteManagerRoutesPopulated()
         {
-            var routeManager = RouteManager.Instance;
+            var pathManager = new PathManager();
 
-            Assert.IsNotNull(routeManager.Routes);
-            Assert.IsTrue(routeManager.Routes.Any());
+            Assert.IsNotNull(pathManager.Path);
         }
 
         [TestMethod]
         public void FindRouteCalgaryToLosAngeles()
         {
-            var routeManager = RouteManager.Instance;
+            var pathManager = new PathManager();
 
             var startCity = City.Calgary;
             var endCity = City.LosAngeles;
 
-            var citiesReached = new List<City>(){ startCity };
-
-            var route = routeManager.GetRoute(startCity, endCity, citiesReached);
+            var route = pathManager.GetRoute(startCity, endCity);
 
             Console.WriteLine("Route from {0} to {1} is as follows:", startCity, endCity);
 
@@ -44,7 +41,7 @@ namespace TestRouteAnalyzer
             {
                 foreach (var segment in route)
                 {
-                    Console.WriteLine("{0} - {1}", segment.StartCity, segment.EndCity);
+                    Console.WriteLine("{0} - {1} ({2} Trains)", segment.StartCity, segment.EndCity, segment.NumberOfTrains);
                 }
             }
             else
@@ -56,13 +53,14 @@ namespace TestRouteAnalyzer
         [TestMethod]
         public void FindRouteCostCalgaryToLosAngeles()
         {
-            var routeManager = RouteManager.Instance;
+            var pathManager = new PathManager();
 
             var startCity = City.Calgary;
             var endCity = City.LosAngeles;
-            var expected = 13;
+            var expected = 12;
 
-            var actual = routeManager.GetCostForRoute(startCity, endCity);
+            var route = pathManager.GetRoute(startCity, endCity);
+            var actual = pathManager.BestCost;
 
             Console.WriteLine("Cost of Route from {0} to {1} is {2}", startCity, endCity, actual);
 

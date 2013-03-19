@@ -40,7 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="City.cs" />
-    <Compile Include="RouteManager.cs" />
+    <Compile Include="Path.cs" />
+    <Compile Include="PathManager.cs" />
     <Compile Include="Route.cs" />
     <Compile Include="SegmentManager.cs" />
     <Compile Include="Segment.cs" />
