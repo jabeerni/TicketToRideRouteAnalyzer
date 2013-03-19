@@ -16,7 +16,7 @@ namespace TicketToRideAnalyzer.Models
         public List<City> StartCities { get; set; }
         public List<City> EndCities { get; set; }
 
-        public List<string> RouteCities { get; set; }
+        public List<Segment> RouteCities { get; set; }
         public int routeCost { get; set; }
 
         public IEnumerable<SelectListItem> StartingCities

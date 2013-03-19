@@ -18,7 +18,7 @@ namespace TicketToRideAnalyzer.Controllers
             var model = new RouteViewModel();
             model.StartCities = Enum.GetValues(typeof(City)).Cast<City>().ToList();
             model.EndCities = Enum.GetValues(typeof(City)).Cast<City>().ToList();
-            model.RouteCities = new List<string>();
+            model.RouteCities = new List<Segment>();
 
             return View(model);
         }
@@ -29,7 +29,7 @@ namespace TicketToRideAnalyzer.Controllers
             ViewBag.Message = "Ticket To Ride Route Analyzer.";
             model.StartCities = Enum.GetValues(typeof(City)).Cast<City>().ToList();
             model.EndCities = Enum.GetValues(typeof(City)).Cast<City>().ToList();
-            model.RouteCities = new List<string>();
+            model.RouteCities = new List<Segment>();
 
             if (!string.IsNullOrWhiteSpace(model.StartCity) && !string.IsNullOrWhiteSpace(model.EndCity))
             {
@@ -42,10 +42,9 @@ namespace TicketToRideAnalyzer.Controllers
                 {
                     foreach (var r in route)
                     {
-                        model.RouteCities.Add(r.StartCity.ToString());
+                        model.RouteCities.Add(r);
                     }
 
-                    model.RouteCities.Add(route.LastOrDefault().EndCity.ToString());
                     model.routeCost = pathManager.BestCost;
                 }
             }

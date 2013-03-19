@@ -1,4 +1,6 @@
-﻿@model TicketToRideAnalyzer.Models.RouteViewModel
+﻿@using RouteAnalyzer;
+
+@model TicketToRideAnalyzer.Models.RouteViewModel
 @{
     ViewBag.Title = "Home Page";
 }
@@ -23,9 +25,9 @@
 }
 Route Found:
  
-@foreach (var s in Model.RouteCities)
+@foreach (var segment in Model.RouteCities)
 {
-    @Html.Label(s)
+    @Html.Label(string.Format("{0} - {1} ({2})", segment.StartCity, segment.EndCity, segment.NumberOfTrains));
 }
 
 @Html.Label(string.Format("Total Cost = {0}", Model.routeCost))
