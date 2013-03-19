@@ -4,6 +4,7 @@
 @{
     ViewBag.Title = "Home Page";
 }
+
 @section featured {
     <section class="featured">
         <div class="content-wrapper">
@@ -16,6 +17,7 @@
         </div>
     </section>
 }
+
 <h3>Find a Route</h3>
 @using (@Html.BeginForm())
 {
@@ -25,9 +27,22 @@
 }
 Route Found:
  
-@foreach (var segment in Model.RouteCities)
-{
-    @Html.Label(string.Format("{0} - {1} ({2})", segment.StartCity, segment.EndCity, segment.NumberOfTrains));
-}
+    @foreach (var segment in Model.RouteCities)
+    {
+        @Html.Label(string.Format("{0} - {1} ({2})", segment.StartCity, segment.EndCity, segment.NumberOfTrains));
+    }
 
 @Html.Label(string.Format("Total Cost = {0}", Model.routeCost))
+
+<div id="Bmap">
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Bmap").BingMap({ Height: 600, Width: 800 });
+        });
+    </script>
+}
+
