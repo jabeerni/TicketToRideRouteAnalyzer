@@ -1,4 +1,5 @@
 ﻿@using RouteAnalyzer;
+@using Microsoft.Web.Helpers
 
 @model TicketToRideAnalyzer.Models.RouteViewModel
 @{
@@ -34,15 +35,5 @@ Route Found:
 
 @Html.Label(string.Format("Total Cost = {0}", Model.routeCost))
 
-<div id="Bmap">
-</div>
-
-@section scripts
-{
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#Bmap").BingMap({ Height: 600, Width: 800 });
-        });
-    </script>
-}
-
+<!-- @Maps.GetBingHtml(key:"AjK_c-a0hYILuxmGiLjmJkossrnxKovOyzS6Q1tRu6R-T-ikma9tvJmkL5Vn5OJD", location:"2033 6th Ave, Seattle, WA", width:"400px", height:"400px") -->
+@Maps.GetGoogleHtml(location:"2033 6th Ave, Seattle, WA", width:"400px", height:"400px")
