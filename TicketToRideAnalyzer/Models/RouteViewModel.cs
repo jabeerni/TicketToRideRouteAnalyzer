@@ -19,6 +19,8 @@ namespace TicketToRideAnalyzer.Models
         public List<Segment> RouteCities { get; set; }
         public int routeCost { get; set; }
 
+        public string MapHtml { get; set; }
+
         public IEnumerable<SelectListItem> StartingCities
         {
             get { return StartCities.Select(c => new SelectListItem { Value = c.ToString(), Text = c.ToString() }); }

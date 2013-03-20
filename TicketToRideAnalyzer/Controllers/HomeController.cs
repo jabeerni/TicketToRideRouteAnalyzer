@@ -1,4 +1,5 @@
-﻿using RouteAnalyzer;
+﻿using Microsoft.Web.Helpers;
+using RouteAnalyzer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,14 @@ namespace TicketToRideAnalyzer.Controllers
             model.EndCities = Enum.GetValues(typeof(City)).Cast<City>().ToList();
             model.RouteCities = new List<Segment>();
 
+            model.MapHtml = Maps.GetBingHtml(key: "AjK_c-a0hYILuxmGiLjmJkossrnxKovOyzS6Q1tRu6R-T-ikma9tvJmkL5Vn5OJD", location: "2033 6th Ave, Seattle, WA", width: "600px", height: "800px")
+                                .ToString()
+                                .Replace("<text>", "")
+                                .Replace("</text>", "")
+                                .Replace("if (useAdaptiveOverlay) {", "")
+                                .Replace("callback: function () {", "callback: function () { if (typeof(useAdaptiveOverlay) != '') { ")
+                                .Replace("load(function() {", "load(function() { {");
+
             return View(model);
         }
 
@@ -30,6 +39,14 @@ namespace TicketToRideAnalyzer.Controllers
             model.StartCities = Enum.GetValues(typeof(City)).Cast<City>().ToList();
             model.EndCities = Enum.GetValues(typeof(City)).Cast<City>().ToList();
             model.RouteCities = new List<Segment>();
+
+            model.MapHtml = Maps.GetBingHtml(key: "AjK_c-a0hYILuxmGiLjmJkossrnxKovOyzS6Q1tRu6R-T-ikma9tvJmkL5Vn5OJD", location: "2033 6th Ave, Seattle, WA", width: "600px", height: "800px")
+                    .ToString()
+                    .Replace("<text>", "")
+                    .Replace("</text>", "")
+                    .Replace("if (useAdaptiveOverlay) {", "")
+                    .Replace("callback: function () {", "callback: function () { if (typeof(useAdaptiveOverlay) != '') { ")
+                    .Replace("load(function() {", "load(function() { {");
 
             if (!string.IsNullOrWhiteSpace(model.StartCity) && !string.IsNullOrWhiteSpace(model.EndCity))
             {
