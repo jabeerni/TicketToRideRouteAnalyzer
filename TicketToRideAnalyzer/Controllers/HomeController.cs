@@ -40,7 +40,7 @@ namespace TicketToRideAnalyzer.Controllers
             model.EndCities = Enum.GetValues(typeof(City)).Cast<City>().ToList();
             model.RouteCities = new List<Segment>();
 
-            model.MapHtml = Maps.GetBingHtml(key: "AjK_c-a0hYILuxmGiLjmJkossrnxKovOyzS6Q1tRu6R-T-ikma9tvJmkL5Vn5OJD", location: "2033 6th Ave, Seattle, WA", width: "600px", height: "800px")
+            model.MapHtml = Maps.GetBingHtml(key: "AjK_c-a0hYILuxmGiLjmJkossrnxKovOyzS6Q1tRu6R-T-ikma9tvJmkL5Vn5OJD", location: "North America", width: "600px", height: "800px")
                     .ToString()
                     .Replace("<text>", "")
                     .Replace("</text>", "")
